@@ -1,10 +1,11 @@
-export default ['$stateProvider', function routes($stateProvider) {
+export default ['$stateProvider', routes];
+
+function routes($stateProvider) {
     $stateProvider
         .state('app', {
             abstract: true,
             template: require('./templates/layout.html'),
             controller: 'ApplicationController',
-            controllerAs: 'vm',
-            title: 'Dexor'
+            controllerAs: 'vm'
         });
-}];
+}

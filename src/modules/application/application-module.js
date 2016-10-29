@@ -9,5 +9,5 @@ import ApplicationController from './ApplicationController';
 
 export default angular.module('app.main', [uiRouter, ngMaterial])
     .config(routes)
-    .controller('ApplicationController', ['$mdSidenav', ApplicationController])
+    .controller('ApplicationController', ApplicationController)
     .name;

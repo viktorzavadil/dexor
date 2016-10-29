@@ -4,7 +4,7 @@
             <md-button ui-sref="app.home" class="md-icon-button">
                 <md-icon>home</md-icon>
             </md-button>
-            <md-button ui-sref="app.home">koncerty</md-button>
+            <md-button ui-sref="app.concerts">koncerty</md-button>
             <md-button ui-sref="app.home">klipy</md-button>
             <md-button ui-sref="app.home">eshop</md-button>
             <md-button ui-sref="app.home">kontakty</md-button>
@@ -26,14 +26,15 @@
     <div class="logo" layout="row" layout-align="center center" hide-xs="true" show-gt-xs="true">
         <img src="/static/assets/images/dexorWH.png"/>
     </div>
-    <md-toolbar layout="row" layout-align="center center" md-whiteframe="4" class="md-hue-2" hide-xs="true" show-gt-xs="true">
+    <md-toolbar layout="row" layout-align="center center" md-whiteframe="4" class="md-hue-2" hide-xs="true"
+                show-gt-xs="true">
         <md-button href="https://www.facebook.com/dexormetal/" class="md-icon-button">
             <md-icon md-svg-src="/static/assets/images/icons/facebook.svg"></md-icon>
         </md-button>
         <md-button href="https://www.youtube.com/channel/UCE0zKNxo0aSWLSv9OKfFa0g" class="md-icon-button">
             <md-icon md-svg-src="/static/assets/images/icons/youtube.svg"></md-icon>
         </md-button>
-        <md-button href="http://soundcloud.com" class="md-icon-button">
+        <md-button href="http://soundcloud.com" class="md-icon-button" ng-disabled="true">
             <md-icon md-svg-src="/static/assets/images/icons/soundcloud.svg"></md-icon>
         </md-button>
         <md-button href="http://bandzone.cz/dexor" class="md-icon-button">
@@ -64,7 +65,7 @@
                     <md-icon>home</md-icon>
                     <div flex>informace</div>
                 </md-list-item>
-                <md-list-item>
+                <md-list-item ui-sref="app.concerts">
                     <md-icon>local_activity</md-icon>
                     <div flex>koncerty</div>
                 </md-list-item>
@@ -106,5 +107,7 @@
         </md-content>
     </md-sidenav>
 
-    <ui-view></ui-view>
+    <md-content>
+        <ui-view></ui-view>
+    </md-content>
 </div>

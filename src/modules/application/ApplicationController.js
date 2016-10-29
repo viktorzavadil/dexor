@@ -1,4 +1,6 @@
-export default function ApplicationController($mdSidenav) {
+export default ['$mdSidenav', ApplicationController];
+
+function ApplicationController($mdSidenav) {
 
     var self = this;
 
@@ -7,4 +9,4 @@ export default function ApplicationController($mdSidenav) {
     function toggleSidenav() {
         $mdSidenav('sidenav').toggle();
     }
-};
+}

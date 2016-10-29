@@ -9,15 +9,7 @@ import 'angular-material/angular-material.css';
 import appConfig from './app.config';
 import application from './modules/application/application-module';
 import home from './modules/home/home-module';
-import stateHolder from './state-holder.js';
+import concerts from './modules/concerts/concerts-module';
 
-angular.module('app', [uiRouter, ngMaterial, application, home])
-    .config(['$urlRouterProvider', '$locationProvider', '$mdThemingProvider', appConfig])
-    .service('stateHolder', ['$rootScope', stateHolder])
-    .run(['$rootScope', '$timeout', 'stateHolder', function ($rootScope, $timeout, stateHolder) {
-        $rootScope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
-            $timeout(function () {
-                stateHolder.setCurrentStateName(toState.name);
-            });
-        });
-    }]);
+angular.module('app', [uiRouter, ngMaterial, application, home, concerts])
+    .config(['$urlRouterProvider', '$locationProvider', '$mdThemingProvider', appConfig]);

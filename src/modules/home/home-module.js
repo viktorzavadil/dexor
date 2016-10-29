@@ -9,5 +9,5 @@ import HomeController from './HomeController';
 
 export default angular.module('app.home', [uiRouter, ngMaterial])
     .config(routes)
-    .controller('HomeController', ['$state', 'stateHolder', HomeController])
+    .controller('HomeController', HomeController)
     .name;
