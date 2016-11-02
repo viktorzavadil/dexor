@@ -39,6 +39,7 @@
     "angular-material": "^1.1.0-rc.5",
     "angular-material-icons": "^0.7.0",
     "angular-resource": "^1.5.8",
+    "angular-sanitize": "^1.5.8",
     "angular-ui-router": "^0.3.0",
     "rx": "^4.1.0",
     "ui-router": "^1.0.0-alpha.3"

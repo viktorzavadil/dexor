@@ -1,0 +1,23 @@
+[
+  {
+    "position": "left",
+    "title": "Dexor v Plzeňském kraji",
+    "text": "Přijďte se na nás podívat 7.1.2017.",
+    "image": "/static/data/plzen.jpg",
+    "order": 1
+  },
+  {
+    "position": "right",
+    "title": "Starý časy",
+    "text": "21.8.2015 jsme publikovali klip Starý časy!",
+    "youtube": "https://www.youtube.com/embed/f8No31SF2Gc?rel=0",
+    "order": 1
+  },
+  {
+    "position": "right",
+    "title": "moda.cz",
+    "text": "Vyšel článek o kapele DEXOR na serveru moda.cz!",
+    "link": "http://www.moda.cz/a/kladenska-metalova-kapela-dexor--12683",
+    "order": 2
+  }
+]

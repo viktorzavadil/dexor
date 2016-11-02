@@ -1,13 +1,38 @@
 <div class="home">
-    <md-card>
+    <md-subheader class="md-no-sticky">
+        <h1>
+            Informace
+        </h1>
+    </md-subheader>
+    <div layout-gt-xs="row" layout="column">
+        <div flex-xs="" flex-gt-xs="50" layout="column">
+            <md-card ng-repeat="item in vm.items | filter:{position: 'left'} | orderBy:'order'" ng-include="'card-content'">
+            </md-card>
+        </div>
+        <div flex-xs="" flex-gt-xs="50" layout="column">
+            <md-card ng-repeat="item in vm.items | filter:{position: 'right'} | orderBy:'order'" ng-include="'card-content'">
+            </md-card>
+        </div>
+    </div>
 
-        <md-card-title>
+    <script type="text/ng-template" id="card-content">
+        <img src="{{item.image}}" ng-if="item.image"/>
+        <iframe src="{{item.youtube}}"
+                frameborder="0"
+                allowfullscreen
+                ng-if="item.youtube"></iframe>
+        <md-card-title ng-if="item.title">
             <md-card-title-text>
-                <h2 class="md-headline">7.1.2017 v Plzeňském kraji!</h2>
+                <span class="md-headline">{{item.title}}</span>
             </md-card-title-text>
         </md-card-title>
-        <md-card-content>
-            <img src="/static/data/plzen.jpg" class="md-media-sm"/>
+        <md-card-content ng-if="item.text">
+            {{item.text}}
         </md-card-content>
-    </md-card>
+        <md-card-actions layout="row" layout-align="end center" ng-if="item.link">
+            <md-button href="{{item.link}}" class="md-icon-button">
+                <md-icon md-svg-src="/static/assets/images/icons/go.svg"></md-icon>
+            </md-button>
+        </md-card-actions>
+    </script>
 </div>
