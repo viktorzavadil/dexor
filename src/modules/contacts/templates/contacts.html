@@ -1,0 +1,22 @@
+<div class="contacts">
+    <md-subheader class="md-no-sticky">
+        <h1>
+            Kontakty
+        </h1>
+    </md-subheader>
+    <md-card ng-repeat="contact in vm.contacts">
+        <md-card-title>
+            <md-card-title-text>
+                <span class="md-headline">{{contact.name}}</span>
+            </md-card-title-text>
+        </md-card-title>
+        <md-card-content>
+            <div>
+                {{contact.phone}}
+            </div>
+            <div>
+                <a href="mailto:{{contact.email}}">{{contact.email}}</a>
+            </div>
+        </md-card-content>
+    </md-card>
+</div>

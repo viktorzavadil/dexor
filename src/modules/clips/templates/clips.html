@@ -1,0 +1,21 @@
+<div class="clips">
+    <md-subheader class="md-no-sticky">
+        <h1>
+            Klipy
+        </h1>
+    </md-subheader>
+    <md-card ng-repeat="clip in vm.clips">
+        <iframe src="{{clip.youtube}}"
+                frameborder="0"
+                allowfullscreen
+                ng-if="clip.youtube"></iframe>
+        <md-card-title ng-if="clip.title">
+            <md-card-title-text>
+                <span class="md-headline">{{clip.title}}</span>
+            </md-card-title-text>
+        </md-card-title>
+        <md-card-content ng-if="clip.text">
+            {{clip.text}}
+        </md-card-content>
+    </md-card>
+</div>

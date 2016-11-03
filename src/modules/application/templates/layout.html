@@ -5,10 +5,10 @@
                 <md-icon>home</md-icon>
             </md-button>
             <md-button ui-sref="app.concerts">koncerty</md-button>
-            <md-button ui-sref="app.home">klipy</md-button>
-            <md-button ui-sref="app.home">eshop</md-button>
-            <md-button ui-sref="app.home">kontakty</md-button>
-            <md-button ui-sref="app.home">sponzoři</md-button>
+            <md-button ui-sref="app.clips">klipy</md-button>
+            <md-button ui-sref="app.eshop">eshop</md-button>
+            <md-button ui-sref="app.contacts">kontakty</md-button>
+            <md-button ui-sref="app.sponsors">sponzoři</md-button>
         </div>
         <div show-xs="true" hide-gt-xs="true" layout="row" layout-align="center center" flex="">
             <div class="toolbar-logo" layout="row" layout-align="start center" flex="">
@@ -69,19 +69,19 @@
                     <md-icon>local_activity</md-icon>
                     <div flex>koncerty</div>
                 </md-list-item>
-                <md-list-item ng-click="vm.toggleSidenav()">
+                <md-list-item ui-sref="app.clips" ng-click="vm.toggleSidenav()">
                     <md-icon>music_video</md-icon>
                     <div flex>klipy</div>
                 </md-list-item>
-                <md-list-item ng-click="vm.toggleSidenav()">
+                <md-list-item ui-sref="app.eshop" ng-click="vm.toggleSidenav()">
                     <md-icon>shopping_cart</md-icon>
                     <div flex>eshop</div>
                 </md-list-item>
-                <md-list-item ng-click="vm.toggleSidenav()">
+                <md-list-item ui-sref="app.contacts" ng-click="vm.toggleSidenav()">
                     <md-icon>email</md-icon>
                     <div flex>kontakty</div>
                 </md-list-item>
-                <md-list-item ng-click="vm.toggleSidenav()">
+                <md-list-item ui-sref="app.sponsors" ng-click="vm.toggleSidenav()">
                     <md-icon>sentiment_very_satisfied</md-icon>
                     <div flex>sponzoři</div>
                 </md-list-item>
