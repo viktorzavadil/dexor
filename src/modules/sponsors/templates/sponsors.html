@@ -1,0 +1,33 @@
+<div class="sponsors">
+    <md-subheader class="md-no-sticky">
+        <h1>
+            Sponzoři
+        </h1>
+    </md-subheader>
+
+    <div hide-gt-xs="true" show-xs="true">
+        <span ng-repeat="sponsor in vm.sponsors" ng-include="'sponsor-card'"></span>
+    </div>
+    <div show-gt-xs="true" hide-xs="true" layout="row">
+        <div flex="50">
+            <span ng-repeat="sponsor in vm.sponsors" ng-if="$even" ng-include="'sponsor-card'"></span>
+        </div>
+        <div flex="">
+            <span ng-repeat="sponsor in vm.sponsors" ng-if="$odd" ng-include="'sponsor-card'"></span>
+        </div>
+    </div>
+</div>
+
+<script type="text/ng-template" id="sponsor-card">
+    <md-card>
+        <img ng-src="{{sponsor.image}}" ng-if="sponsor.image"/>
+        <md-card-title>
+            <md-card-title-text>
+                <span class="md-headline">{{sponsor.title}}</span>
+            </md-card-title-text>
+        </md-card-title>
+        <md-card-content ng-if="sponsor.note">
+            {{sponsor.note}}
+        </md-card-content>
+    </md-card>
+</script>
