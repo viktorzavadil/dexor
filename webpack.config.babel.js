@@ -1,4 +1,7 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const
+    HtmlWebpackPlugin = require('html-webpack-plugin'),
+    CopyWebpackPlugin = require('copy-webpack-plugin'),
+    CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
     entry: './src/app.js',
@@ -36,9 +39,11 @@ module.exports = {
         }]
     },
     plugins: [
+        new CleanWebpackPlugin('dist'),
         new HtmlWebpackPlugin({
             template: `${__dirname}/public/index.html`,
             inject: 'body'
-        })
+        }),
+        new CopyWebpackPlugin([{from: `${__dirname}/public/static`, to: `static`}])
     ]
 };

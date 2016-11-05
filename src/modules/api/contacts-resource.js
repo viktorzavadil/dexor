@@ -1,3 +1,5 @@
+'use strict';
+
 export default ['$resource', ContactsResource];
 
 function ContactsResource($resource) {

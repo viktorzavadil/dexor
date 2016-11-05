@@ -1,3 +1,5 @@
+'use strict';
+
 import './templates/contacts.less';
 
 import angular from 'angular';

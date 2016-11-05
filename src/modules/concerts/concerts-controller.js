@@ -1,3 +1,5 @@
+'use strict';
+
 import Rx from 'rx';
 
 export default ['$scope', '$state', '$stateParams', '$location', '$timeout', 'concertResource', ConcertsController];

@@ -1,7 +1,13 @@
+'use strict';
+
 export default ['$scope', '$sce', 'clipsResource', ClipsController];
 
 function ClipsController($scope, $sce, clipsResource) {
+
+    const Rx = require('rx');
+
     var self = this;
+    self.clips = [];
 
     activate();
 

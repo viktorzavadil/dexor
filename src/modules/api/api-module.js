@@ -1,4 +1,7 @@
+'use strict';
+
 import ngResource from 'angular-resource';
+import angular from 'angular';
 
 import ConcertsResource from './concerts-resource.js';
 import InfoResource from './info-resource.js';

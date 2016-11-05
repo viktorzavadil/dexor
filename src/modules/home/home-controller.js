@@ -1,6 +1,11 @@
+'use strict';
+
 export default ['$scope', '$sce', 'infoResource', HomeController];
 
 function HomeController($scope, $sce, infoResource) {
+
+    const Rx = require('rx');
+
     var self = this;
 
     activate();
@@ -17,6 +22,9 @@ function HomeController($scope, $sce, infoResource) {
         function sanitize(item) {
             if (item.youtube) {
                 item.youtube = $sce.trustAsResourceUrl(item.youtube);
+            }
+            if (item.image) {
+                item.image = $sce.trustAsResourceUrl(item.image);
             }
             return item;
         }

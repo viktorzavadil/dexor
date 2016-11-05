@@ -2,6 +2,21 @@
   {
     "name": "Vít Jančura",
     "phone": "732 269 167",
-    "email": "vitis@dexor.cz"
+    "email": "vitis@dexor.cz",
+    "description": "organizátor koncertů"
+  },
+  {
+    "name": "Tomáš Jančura",
+    "email": "tom@dexor.cz",
+    "description": "frontman"
+  },
+  {
+    "name": "Viktor Zavadil",
+    "email": "vikous@dexor.cz",
+    "description": "web"
+  },
+  {
+    "name": "Honza Vodička",
+    "email": "honza@dexor.cz"
   }
 ]

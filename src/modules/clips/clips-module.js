@@ -1,3 +1,5 @@
+'use strict';
+
 import './templates/clips.less';
 
 import angular from 'angular';

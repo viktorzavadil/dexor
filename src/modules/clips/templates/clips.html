@@ -4,8 +4,22 @@
             Klipy
         </h1>
     </md-subheader>
-    <md-card ng-repeat="clip in vm.clips">
-        <iframe src="{{clip.youtube}}"
+    <div hide-gt-xs="true" show-xs="true">
+        <span ng-repeat="clip in vm.clips" ng-include="'clip-card'"></span>
+    </div>
+    <div show-gt-xs="true" hide-xs="true" layout="row">
+        <div flex="50">
+            <span ng-repeat="clip in vm.clips" ng-if="$even" ng-include="'clip-card'"></span>
+        </div>
+        <div flex="">
+            <span ng-repeat="clip in vm.clips" ng-if="$odd" ng-include="'clip-card'"></span>
+        </div>
+    </div>
+</div>
+
+<script type="text/ng-template" id="clip-card">
+    <md-card>
+        <iframe ng-src="{{clip.youtube}}"
                 frameborder="0"
                 allowfullscreen
                 ng-if="clip.youtube"></iframe>
@@ -18,4 +32,4 @@
             {{clip.text}}
         </md-card-content>
     </md-card>
-</div>
+</script>

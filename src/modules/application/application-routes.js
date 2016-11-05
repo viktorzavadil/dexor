@@ -1,3 +1,5 @@
+'use strict';
+
 export default ['$stateProvider', routes];
 
 function routes($stateProvider) {

@@ -16,8 +16,8 @@
     </div>
 
     <script type="text/ng-template" id="card-content">
-        <img src="{{item.image}}" ng-if="item.image"/>
-        <iframe src="{{item.youtube}}"
+        <img ng-src="{{item.image}}" ng-if="item.image"/>
+        <iframe ng-src="{{item.youtube}}"
                 frameborder="0"
                 allowfullscreen
                 ng-if="item.youtube"></iframe>

@@ -5,7 +5,7 @@ import ngMaterial from 'angular-material';
 import uiRouter from 'angular-ui-router';
 
 import routes from './application-routes';
-import ApplicationController from './ApplicationController';
+import ApplicationController from './application-controller';
 
 export default angular.module('app.main', [uiRouter, ngMaterial])
     .config(routes)

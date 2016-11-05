@@ -4,19 +4,37 @@
             Kontakty
         </h1>
     </md-subheader>
-    <md-card ng-repeat="contact in vm.contacts">
+
+    <div hide-gt-xs="true" show-xs="true">
+        <span ng-repeat="contact in vm.contacts" ng-include="'contact-card'"></span>
+    </div>
+    <div show-gt-xs="true" hide-xs="true" layout="row">
+        <div flex="50">
+            <span ng-repeat="contact in vm.contacts" ng-if="$even" ng-include="'contact-card'"></span>
+        </div>
+        <div flex="">
+            <span ng-repeat="contact in vm.contacts" ng-if="$odd" ng-include="'contact-card'"></span>
+        </div>
+    </div>
+</div>
+
+<script type="text/ng-template" id="contact-card">
+    <md-card>
         <md-card-title>
             <md-card-title-text>
                 <span class="md-headline">{{contact.name}}</span>
+                <span class="md-subhead description">{{contact.description}}<span ng-if="!contact.description"><i class="material-icons">mood</i></span></span>
             </md-card-title-text>
         </md-card-title>
         <md-card-content>
-            <div>
+            <div  class="phone">
                 {{contact.phone}}
+                <span ng-if="!contact.phone">&nbsp;</span>
             </div>
-            <div>
+            <div class="mail">
                 <a href="mailto:{{contact.email}}">{{contact.email}}</a>
+            </div>
             </div>
         </md-card-content>
     </md-card>
-</div>
+</script>

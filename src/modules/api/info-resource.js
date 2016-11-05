@@ -1,3 +1,5 @@
+'use strict';
+
 export default ['$resource', InfoResource];
 
 function InfoResource($resource) {

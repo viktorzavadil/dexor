@@ -1,6 +1,11 @@
+'use strict';
+
 export default ['$scope', 'contactsResource', ContactsController];
 
 function ContactsController($scope, contactsResource) {
+
+    const Rx = require('rx');
+
     var self = this;
 
     activate();
