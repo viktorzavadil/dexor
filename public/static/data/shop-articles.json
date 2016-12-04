@@ -1,0 +1,73 @@
+[
+  {
+    "id": "cd-zivot-je-boj",
+    "title": "CD Život je boj",
+    "image": "static/data/images/cd.jpg",
+    "price": "100",
+    "description": [
+      "V hlavě (3:17)",
+      "Starý časy (4:09)",
+      "Bolest (4:21)",
+      "Války (3:36)",
+      "Pojď (2:53)",
+      "Neptej se proč (3:44)",
+      "Ten zvláštní pocit (3:43)",
+      "Tváří v tvář (4:04)",
+      "Život je boj (3:50)",
+      "Jakou cenu máš!? (3:48)"
+    ]
+  },
+  {
+    "id": "tricko-dexor",
+    "sizes": [
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "title": "Tričko",
+    "image": "static/data/images/tricko-dexor.jpg",
+    "price": "200"
+  },
+  {
+    "id": "tilko-dexor",
+    "sizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "title": "Dámské tílko",
+    "image": "static/data/images/tilko-dexor.jpg",
+    "price": "250"
+  },
+  {
+    "id": "bila-placka-mala",
+    "title": "Malá bílá placka",
+    "image": "static/data/images/placky.jpg",
+    "price": "10"
+  },
+  {
+    "id": "cerna-placka-mala",
+    "title": "Malá černá placka",
+    "image": "static/data/images/placky.jpg",
+    "price": "10"
+  },
+  {
+    "id": "velka-bila-placka",
+    "title": "Bílá placka",
+    "image": "static/data/images/placky.jpg",
+    "price": "20"
+  },
+  {
+    "id": "velka-cerna-placka",
+    "title": "Černá placka",
+    "image": "static/data/images/placky.jpg",
+    "price": "20"
+  },
+  {
+    "id": "placka-stary-casy",
+    "title": "Placka starý časy",
+    "image": "static/data/images/placky.jpg",
+    "price": "20"
+  }
+]

@@ -6,7 +6,7 @@
             </md-button>
             <md-button ui-sref="app.concerts">koncerty</md-button>
             <md-button ui-sref="app.clips">klipy</md-button>
-            <md-button ui-sref="app.eshop">eshop</md-button>
+            <md-button ui-sref="app.shop">obchod</md-button>
             <md-button ui-sref="app.contacts">kontakty</md-button>
             <md-button ui-sref="app.sponsors">sponzoři</md-button>
         </div>
@@ -34,9 +34,9 @@
         <md-button href="https://www.youtube.com/channel/UCE0zKNxo0aSWLSv9OKfFa0g" class="md-icon-button">
             <md-icon md-svg-src="/static/assets/images/icons/youtube.svg"></md-icon>
         </md-button>
-        <md-button href="http://soundcloud.com" class="md-icon-button" ng-disabled="true">
-            <md-icon md-svg-src="/static/assets/images/icons/soundcloud.svg"></md-icon>
-        </md-button>
+        <!--<md-button href="http://soundcloud.com" class="md-icon-button" ng-disabled="true">-->
+            <!--<md-icon md-svg-src="/static/assets/images/icons/soundcloud.svg"></md-icon>-->
+        <!--</md-button>-->
         <md-button href="http://bandzone.cz/dexor" class="md-icon-button">
             <md-icon md-svg-src="/static/assets/images/icons/bandzone.svg"></md-icon>
         </md-button>
@@ -73,9 +73,9 @@
                     <md-icon>music_video</md-icon>
                     <div flex>klipy</div>
                 </md-list-item>
-                <md-list-item ui-sref="app.eshop" ng-click="vm.toggleSidenav()">
+                <md-list-item ui-sref="app.shop" ng-click="vm.toggleSidenav()">
                     <md-icon>shopping_cart</md-icon>
-                    <div flex>eshop</div>
+                    <div flex>obchod</div>
                 </md-list-item>
                 <md-list-item ui-sref="app.contacts" ng-click="vm.toggleSidenav()">
                     <md-icon>email</md-icon>
@@ -94,10 +94,10 @@
                     <md-icon md-svg-src="/static/assets/images/icons/youtube.svg"></md-icon>
                     <div flex>youtube</div>
                 </md-list-item>
-                <md-list-item href="http://soundcloud.com" ng-disabled="true">
-                    <md-icon md-svg-src="/static/assets/images/icons/soundcloud.svg"></md-icon>
-                    <div flex>soundcloud</div>
-                </md-list-item>
+                <!--<md-list-item href="http://soundcloud.com" ng-disabled="true">-->
+                    <!--<md-icon md-svg-src="/static/assets/images/icons/soundcloud.svg"></md-icon>-->
+                    <!--<div flex>soundcloud</div>-->
+                <!--</md-list-item>-->
                 <md-list-item href="http://bandzone.cz/dexor">
                     <md-icon md-svg-src="/static/assets/images/icons/bandzone.svg"></md-icon>
                     <div flex>bandzone</div>

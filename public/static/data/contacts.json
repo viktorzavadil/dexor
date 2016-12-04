@@ -1,9 +1,14 @@
 [
   {
+    "name": "Eliška Herinková",
+    "phone": "774 857 513",
+    "email": "eliska@dexor.cz",
+    "description": "organizátor"
+  },
+  {
     "name": "Vít Jančura",
     "phone": "732 269 167",
-    "email": "vitis@dexor.cz",
-    "description": "organizátor koncertů"
+    "email": "vitis@dexor.cz"
   },
   {
     "name": "Tomáš Jančura",

@@ -1,0 +1,67 @@
+<div class="shop">
+        <md-subheader class="md-no-sticky">
+            <h1>
+                Obchod
+            </h1>
+        </md-subheader>
+
+    <div ng-include="'shop-article-card'" layout="row" layout-wrap layout-align="center start"></div>
+
+    <div layout="row" layout-align="center center" layout-margin>
+        <md-button ng-disabled="vm.cart.length === 0" ng-click="vm.deleteAll()">
+            <md-icon>delete</md-icon>
+            Odstranit vše
+        </md-button>
+        <md-button class="md-raised" ng-disabled="vm.cart.length === 0" ng-click="vm.order">
+            <md-icon>shopping_cart</md-icon>
+            Objednat
+        </md-button>
+    </div>
+</div>
+
+<script type="text/ng-template" id="shop-article-card">
+    <md-card ng-repeat="item in vm.shopArticles">
+        <img ng-src="{{item.image}}" ng-if="item.image"/>
+        <md-card-title>
+            <md-card-title-text>
+                <span class="md-headline">{{item.title}}</span>
+            </md-card-title-text>
+        </md-card-title>
+        <md-card-content layout="column">
+            <div ng-if="item.description">
+                <span ng-if="typeof(item.description) === 'string'">{{item.description}}</span>
+                <span ng-if="typeof(item.description) !== 'string'" ng-repeat="di in item.description"
+                      class="description">
+                    <span>{{di}}</span><span ng-if="!$last">&nbsp;&#8226; </span>
+                </span>
+
+            </div>
+            <md-input-container ng-if="item.sizes">
+                <md-select ng-model="item.selectedSize" placeholder="Velikost">
+                    <md-option ng-value="size" ng-repeat="size in item.sizes">{{ size }}</md-option>
+                </md-select>
+            </md-input-container>
+            <md-input-container>
+                <label>Počet</label>
+                <input type="number" name="quantity" ng-model="item.quantity" required>
+            </md-input-container>
+            <div>{{item.price}},-</div>
+        </md-card-content>
+        <md-card-actions layout="row" layout-align="end center">
+            <md-button ng-click="vm.deleteFromCart(item)">
+                <md-icon>delete</md-icon>
+                Odstranit
+            </md-button>
+            <span flex=""></span>
+            <md-button ng-click="vm.toCart(item)">
+                <md-icon>shopping_cart</md-icon>
+                Koupit
+            </md-button>
+        </md-card-actions>
+        <md-card-footer>
+            <div ng-repeat="cartItem in vm.cartItems(item)">
+                {{cartItem.quantity}}x<span>&nbsp;{{item.title}}</span><span ng-if="cartItem.size">&nbsp;{{cartItem.size}}</span>
+            </div>
+        </md-card-footer>
+    </md-card>
+</script>

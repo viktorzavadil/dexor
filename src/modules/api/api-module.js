@@ -8,6 +8,7 @@ import InfoResource from './info-resource.js';
 import ClipsResource from './clips-resource.js';
 import ContactsResource from './contacts-resource.js';
 import SponsorsResource from './sponsors-resource.js';
+import ShopResource from './shop-resource.js';
 
 export default angular.module('app.api', [ngResource])
     .service('concertResource', ConcertsResource)
@@ -15,4 +16,5 @@ export default angular.module('app.api', [ngResource])
     .service('clipsResource', ClipsResource)
     .service('contactsResource', ContactsResource)
     .service('sponsorsResource', SponsorsResource)
+    .service('shopResource', ShopResource)
     .name;
