@@ -1,8 +1,8 @@
 'use strict';
 
-export default ['$scope', '$mdDialog', 'localStorageService', 'shopResource', 'orderResource', ShopController];
+export default ['$scope', '$mdDialog', 'localStorageService', 'shopResource', 'orderResource', '$mdToast', ShopController];
 
-function ShopController($scope, $mdDialog, localStorageService, shopResource, orderResource) {
+function ShopController($scope, $mdDialog, localStorageService, shopResource, orderResource, $mdToast) {
 
     var Rx = require('rx');
 
@@ -82,8 +82,23 @@ function ShopController($scope, $mdDialog, localStorageService, shopResource, or
         }).then(function(order) {
             self.cart = [];
             reinitLocalStorage();
-            return orderResource.post({email: order.user.email, order: JSON.stringify(order, null, 2)}).$promise;
-        }).then(() => console.log("order ok"), (err) => console.log(err));
+            return orderResource.save(order).$promise;
+        }).then(() => {
+            $mdToast.show(
+                $mdToast.simple()
+                    .textContent('Objednávka odeslána! Děkujeme za podporu.')
+                    .position('bottom right')
+                    .hideDelay(5000)
+            );
+        }, (err) => {
+            $mdToast.show(
+                $mdToast.simple()
+                    .textContent('Objednávku se nepodařilo odeslat, prosím, kontaktujte nás.')
+                    .position('bottom right')
+                    .hideDelay(5000)
+            );
+            console.log(err);
+        });
     }
 
     function reinitLocalStorage() {

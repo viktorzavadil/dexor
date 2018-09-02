@@ -3,11 +3,11 @@
 class OrderResource {
 
     constructor($resource) {
-        this.order = $resource('order.php', {email: "@email", order: "@order"});
+        this.order = $resource('order.php', {order: "@order"});
     }
 
-    post(email, order) {
-        return this.order.save({email, order});
+    save(order) {
+        return this.order.save(order);
     }
 }
 
