@@ -13,7 +13,7 @@ function ClipsController($scope, $sce, clipsResource) {
 
     function activate() {
         Rx.Observable
-            .of(Rx.Observable.fromPromise(clipsResource.get().$promise))
+            .of(Rx.Observable.fromPromise(clipsResource.query().$promise))
             .merge(1)
             .flatMap(Rx.Observable.from)
             .map(sanitize)

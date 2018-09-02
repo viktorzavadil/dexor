@@ -54,13 +54,13 @@
   },
   {
     "id": "velka-bila-placka",
-    "title": "Bílá placka",
+    "title": "Velká bílá placka",
     "image": "static/data/images/placky.jpg",
     "price": "20"
   },
   {
     "id": "velka-cerna-placka",
-    "title": "Černá placka",
+    "title": "Velká černá placka",
     "image": "static/data/images/placky.jpg",
     "price": "20"
   },

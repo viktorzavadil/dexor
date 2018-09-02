@@ -1,27 +1,52 @@
+@import "variables";
+
 .content {
+
+  min-height: 100%;
+
+  .header-image {
+    background-color: #3E2723;
+    background-image: url("/static/assets/images/logo.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100px;
+
+    @media @large {
+      background-color: black;
+      background-image: url("/static/assets/images/logo.svg"), url("/static/assets/images/header.svg");
+      background-size: 600px auto, cover;
+      background-repeat: no-repeat, no-repeat;
+      background-position: top center, top 15% center;
+      height: 600px;
+    }
+  }
+
+  .header-toolbar {
+    &.small-screen {
+      @media @large {
+        display: none;
+      }
+    }
+
+    &.large-screen {
+      display: none;
+      @media @large {
+        display: flex;
+      }
+    }
+
+    .home-button {
+      img {
+        height: 48px;
+        width: 142px;
+        vertical-align: middle;
+      }
+    }
+  }
+
   .activeItem {
     border-bottom: 2px rgb(140, 158, 255) solid;
     border-radius: 0;
-  }
-
-  .toolbar-logo {
-    img {
-      height: 48px;
-      width: auto;
-    }
-  }
-
-  .logo {
-    background-image: url("/static/assets/images/booklet.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    height: 300px;
-
-    img {
-      height: auto;
-      width: auto;
-      max-height: 100%;
-    }
   }
 }

@@ -1,14 +1,20 @@
 'use strict';
 
-export default ['$resource', InfoResource];
+class ClipsResource {
 
-function InfoResource($resource) {
+    constructor($resource) {
+        this.clips = $resource('static/data/clips.json', {}, {
+            get: {
+                isArray: true
+            }
+        });
+    }
 
-    var clips = $resource('static/data/clips.json', {}, {
-        get: {
-            isArray: true
-        }
-    });
-
-    this.get = clips.get;
+    query() {
+        return this.clips.get();
+    }
 }
+
+ClipsResource.$inject = ['$resource'];
+
+export default ClipsResource;

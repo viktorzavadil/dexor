@@ -1,14 +1,16 @@
 'use strict';
 
-export default ['$mdSidenav', ApplicationController];
+class ApplicationController {
 
-function ApplicationController($mdSidenav) {
+    constructor($mdSidenav) {
+        this.$mdSidenav = $mdSidenav;
+    }
 
-    var self = this;
-
-    self.toggleSidenav = toggleSidenav;
-
-    function toggleSidenav() {
-        $mdSidenav('sidenav').toggle();
+    toggleNavigation() {
+        this.$mdSidenav('navigation').toggle();
     }
 }
+
+ApplicationController.$inject = ['$mdSidenav'];
+
+export default ApplicationController;

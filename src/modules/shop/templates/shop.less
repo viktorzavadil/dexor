@@ -7,11 +7,43 @@
   }
 
   .description {
-    color: rgba(0, 0, 0, 0.54);
     font-size: 14px;
   }
 
   .lower-cased {
     text-transform: lowercase;
+  }
+}
+
+.order-dialog {
+
+  @required-color: #FF7043;
+
+  .post-info {
+    font-size: 12px;
+  }
+
+  .note {
+    margin-top: 16px;
+  }
+
+  md-input-container, md-input-container.md-input-has-value {
+    &.md-input-invalid, &.md-input-invalid.md-default-theme, &.md-input-has-value, &.md-input-focused {
+
+      label.md-required {
+        color: @required-color;
+
+        &:after {
+          content: ' *';
+          font-size: 13px;
+          vertical-align: top;
+          color: @required-color;
+        }
+      }
+
+      .md-input {
+        border-color: @required-color;
+      }
+    }
   }
 }

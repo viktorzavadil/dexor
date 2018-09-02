@@ -1,6 +1,18 @@
-<div class="content" ng-cloak="">
-    <md-toolbar layout="row" layout-align="end center" class="md-hue-2" md-whiteframe="4">
-        <div hide-xs="true" show-gt-xs="true">
+<div class="content" ng-cloak="" layout="column">
+    <div class="header-image">&nbsp;</div>
+    <md-toolbar class="header-toolbar small-screen">
+        <div class="md-toolbar-tools" layout-align="end center">
+            <div>
+                <md-button aria-label="Open menu"
+                           ng-click="vm.toggleNavigation()"
+                           class="md-icon-button">
+                    <md-icon>menu</md-icon>
+                </md-button>
+            </div>
+        </div>
+    </md-toolbar>
+    <md-toolbar class="header-toolbar large-screen">
+        <div class="md-toolbar-tools" layout-align="end center">
             <md-button ui-sref="app.home" class="md-icon-button">
                 <md-icon>home</md-icon>
             </md-button>
@@ -10,24 +22,53 @@
             <md-button ui-sref="app.contacts">kontakty</md-button>
             <md-button ui-sref="app.sponsors">sponzoři</md-button>
         </div>
-        <div show-xs="true" hide-gt-xs="true" layout="row" layout-align="center center" flex="">
-            <div class="toolbar-logo" layout="row" layout-align="start center" flex="">
-                <img src="/static/assets/images/dexorWH.png"/>
-            </div>
-            <div>
-                <md-button aria-label="Open menu"
-                           ng-click="vm.toggleSidenav()"
-                           class="md-icon-button">
-                    <md-icon>menu</md-icon>
-                </md-button>
-            </div>
-        </div>
     </md-toolbar>
-    <div class="logo" layout="row" layout-align="center center" hide-xs="true" show-gt-xs="true">
-        <img src="/static/assets/images/dexorWH.png"/>
-    </div>
-    <md-toolbar layout="row" layout-align="center center" md-whiteframe="4" class="md-hue-2" hide-xs="true"
-                show-gt-xs="true">
+    <md-sidenav class="md-sidenav-right md-whiteframe-z2"
+                md-component-id="navigation"
+                md-whiteframe="4">
+
+        <md-toolbar layout="row" class="md-hue-2">
+            <div class="md-toolbar-tools">
+                Navigace
+            </div>
+        </md-toolbar>
+
+
+        <md-content>
+            <md-list>
+                <md-list-item ui-sref="app.home" ng-click="vm.toggleNavigation()">
+                    <md-icon>home</md-icon>
+                    <div flex>informace</div>
+                </md-list-item>
+                <md-list-item ui-sref="app.concerts" ng-click="vm.toggleNavigation()">
+                    <md-icon>local_activity</md-icon>
+                    <div flex>koncerty</div>
+                </md-list-item>
+                <md-list-item ui-sref="app.clips" ng-click="vm.toggleNavigation()">
+                    <md-icon>music_video</md-icon>
+                    <div flex>klipy</div>
+                </md-list-item>
+                <md-list-item ui-sref="app.shop" ng-click="vm.toggleNavigation()">
+                    <md-icon>shopping_cart</md-icon>
+                    <div flex>obchod</div>
+                </md-list-item>
+                <md-list-item ui-sref="app.contacts" ng-click="vm.toggleNavigation()">
+                    <md-icon>email</md-icon>
+                    <div flex>kontakty</div>
+                </md-list-item>
+                <md-list-item ui-sref="app.sponsors" ng-click="vm.toggleNavigation()">
+                    <md-icon>sentiment_very_satisfied</md-icon>
+                    <div flex>sponzoři</div>
+                </md-list-item>
+            </md-list>
+        </md-content>
+    </md-sidenav>
+
+    <md-content flex="">
+        <ui-view></ui-view>
+    </md-content>
+
+    <md-toolbar layout="row" layout-align="center center">
         <md-button href="https://www.facebook.com/dexormetal/" class="md-icon-button">
             <md-icon md-svg-src="/static/assets/images/icons/facebook.svg"></md-icon>
         </md-button>
@@ -35,79 +76,10 @@
             <md-icon md-svg-src="/static/assets/images/icons/youtube.svg"></md-icon>
         </md-button>
         <!--<md-button href="http://soundcloud.com" class="md-icon-button" ng-disabled="true">-->
-            <!--<md-icon md-svg-src="/static/assets/images/icons/soundcloud.svg"></md-icon>-->
+        <!--<md-icon md-svg-src="/static/assets/images/icons/soundcloud.svg"></md-icon>-->
         <!--</md-button>-->
         <md-button href="http://bandzone.cz/dexor" class="md-icon-button">
             <md-icon md-svg-src="/static/assets/images/icons/bandzone.svg"></md-icon>
         </md-button>
     </md-toolbar>
-
-    <md-sidenav class="md-sidenav-right md-whiteframe-z2"
-                md-component-id="sidenav"
-                md-disable-backdrop=""
-                md-whiteframe="4">
-
-        <md-toolbar layout="row" class="md-hue-2">
-            <div class="md-toolbar-tools">
-                <md-button aria-label="Navigation" ng-click="vm.toggleSidenav()" class="md-icon-button">
-                    <md-icon>chevron_right</md-icon>
-                </md-button>
-                <div flex="">
-                    Navigace
-                </div>
-            </div>
-        </md-toolbar>
-
-
-        <md-content>
-            <md-list>
-                <md-list-item ui-sref="app.home" ng-click="vm.toggleSidenav()">
-                    <md-icon>home</md-icon>
-                    <div flex>informace</div>
-                </md-list-item>
-                <md-list-item ui-sref="app.concerts" ng-click="vm.toggleSidenav()">
-                    <md-icon>local_activity</md-icon>
-                    <div flex>koncerty</div>
-                </md-list-item>
-                <md-list-item ui-sref="app.clips" ng-click="vm.toggleSidenav()">
-                    <md-icon>music_video</md-icon>
-                    <div flex>klipy</div>
-                </md-list-item>
-                <md-list-item ui-sref="app.shop" ng-click="vm.toggleSidenav()">
-                    <md-icon>shopping_cart</md-icon>
-                    <div flex>obchod</div>
-                </md-list-item>
-                <md-list-item ui-sref="app.contacts" ng-click="vm.toggleSidenav()">
-                    <md-icon>email</md-icon>
-                    <div flex>kontakty</div>
-                </md-list-item>
-                <md-list-item ui-sref="app.sponsors" ng-click="vm.toggleSidenav()">
-                    <md-icon>sentiment_very_satisfied</md-icon>
-                    <div flex>sponzoři</div>
-                </md-list-item>
-                <md-divider></md-divider>
-                <md-list-item href="https://www.facebook.com/dexormetal/">
-                    <md-icon md-svg-src="/static/assets/images/icons/facebook.svg"></md-icon>
-                    <div flex>facebook</div>
-                </md-list-item>
-                <md-list-item href="https://www.youtube.com/channel/UCE0zKNxo0aSWLSv9OKfFa0g">
-                    <md-icon md-svg-src="/static/assets/images/icons/youtube.svg"></md-icon>
-                    <div flex>youtube</div>
-                </md-list-item>
-                <!--<md-list-item href="http://soundcloud.com" ng-disabled="true">-->
-                    <!--<md-icon md-svg-src="/static/assets/images/icons/soundcloud.svg"></md-icon>-->
-                    <!--<div flex>soundcloud</div>-->
-                <!--</md-list-item>-->
-                <md-list-item href="http://bandzone.cz/dexor">
-                    <md-icon md-svg-src="/static/assets/images/icons/bandzone.svg"></md-icon>
-                    <div flex>bandzone</div>
-                </md-list-item>
-
-            </md-list>
-        </md-content>
-    </md-sidenav>
-
-    <md-content>
-        <ui-view></ui-view>
-    </md-content>
 </div>

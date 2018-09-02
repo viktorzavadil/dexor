@@ -1,8 +1,16 @@
 'use strict';
 
-export default ['$stateProvider', routes];
+function routes($stateProvider, $urlMatcherFactoryProvider, $urlRouterProvider) {
 
-function routes($stateProvider) {
+    $urlMatcherFactoryProvider.caseInsensitive(true);
+
+    $urlRouterProvider
+        .when('', '/')
+        .otherwise(function($injector) {
+            var $state = $injector.get('$state');
+            $state.go('app.home');
+        });
+
     $stateProvider
         .state('app', {
             abstract: true,
@@ -11,3 +19,7 @@ function routes($stateProvider) {
             controllerAs: 'vm'
         });
 }
+
+routes.$inject = ['$stateProvider', '$urlMatcherFactoryProvider', '$urlRouterProvider'];
+
+export default routes;

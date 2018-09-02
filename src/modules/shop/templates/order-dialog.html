@@ -1,0 +1,62 @@
+<md-dialog aria-label="Order" class="order-dialog">
+    <md-toolbar md-whiteframe="4" class="md-hue-2">
+        <div class="md-toolbar-tools">
+            <h2>DEXOR - Objednávka</h2>
+            <span flex></span>
+            <md-button class="md-icon-button" ng-click="cancel()">
+                <md-icon>clear</md-icon>
+            </md-button>
+        </div>
+    </md-toolbar>
+    <md-dialog-content layout="column" layout-padding="">
+        <div ng-repeat="cartItem in cart">
+            {{cartItem.quantity}}x<span>&nbsp;{{cartItem.title}}</span><span ng-if="cartItem.size">&nbsp;{{cartItem.size}}</span>
+            <span>{{cartItem.quantity * cartItem.price}},-</span>
+        </div>
+        <md-divider></md-divider>
+        <div>
+            Celkem {{totalPrice()}},-
+        </div>
+        <div class="post-info">
+            Bude připočteno poštovné podle sazeb České pošty.
+        </div>
+        <md-divider></md-divider>
+        <div layout="row" layout-xs="column">
+            <md-input-container flex-gt-xs="">
+                <label>Jméno</label>
+                <input type="text" name="name" ng-model="user.name" required>
+            </md-input-container>
+            <md-input-container flex-gt-xs="">
+                <label>Příjmení</label>
+                <input type="text" name="surname" ng-model="user.surname" required>
+            </md-input-container>
+            <md-input-container flex-gt-xs="">
+                <label>Email</label>
+                <input type="text" name="email" ng-model="user.email" required>
+            </md-input-container>
+        </div>
+        <div layout="row" layout-xs="column">
+            <md-input-container flex-gt-xs="">
+                <label>Ulice a číslo popisné</label>
+                <input type="text" name="street" ng-model="user.street" required>
+            </md-input-container>
+            <md-input-container flex-gt-xs="">
+                <label>Město</label>
+                <input type="text" name="city" ng-model="user.city" required>
+            </md-input-container>
+            <md-input-container flex-gt-xs="">
+                <label>PSČ</label>
+                <input type="number" name="postalCode" ng-model="user.postalCode" required>
+            </md-input-container>
+        </div>
+        <div class="note" layout="row">
+            <md-input-container flex>
+                <label>Poznámka</label>
+                <textarea cols="50" name="note" ng-model="user.note"></textarea>
+            </md-input-container>
+        </div>
+    </md-dialog-content>
+    <md-dialog-actions>
+        <md-button ng-click="order()" class="md-raised" ng-disabled="!ready()">Objednat</md-button>
+    </md-dialog-actions>
+</md-dialog>

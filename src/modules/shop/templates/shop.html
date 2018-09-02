@@ -12,7 +12,7 @@
             <md-icon>delete</md-icon>
             Odstranit vše
         </md-button>
-        <md-button class="md-raised" ng-disabled="vm.cart.length === 0" ng-click="vm.order">
+        <md-button class="md-raised" ng-disabled="vm.cart.length === 0" ng-click="vm.order($event)">
             <md-icon>shopping_cart</md-icon>
             Objednat
         </md-button>
@@ -37,18 +37,19 @@
 
             </div>
             <md-input-container ng-if="item.sizes">
+                <label>Velikost</label>
                 <md-select ng-model="item.selectedSize" placeholder="Velikost">
                     <md-option ng-value="size" ng-repeat="size in item.sizes">{{ size }}</md-option>
                 </md-select>
             </md-input-container>
             <md-input-container>
                 <label>Počet</label>
-                <input type="number" name="quantity" ng-model="item.quantity" required>
+                <input type="number" name="quantity" ng-model="item.quantity" min="0">
             </md-input-container>
             <div>{{item.price}},-</div>
         </md-card-content>
         <md-card-actions layout="row" layout-align="end center">
-            <md-button ng-click="vm.deleteFromCart(item)">
+            <md-button ng-click="vm.deleteFromCart(item)" ng-disabled="vm.cartItems(item).length === 0">
                 <md-icon>delete</md-icon>
                 Odstranit
             </md-button>
@@ -60,7 +61,7 @@
         </md-card-actions>
         <md-card-footer>
             <div ng-repeat="cartItem in vm.cartItems(item)">
-                {{cartItem.quantity}}x<span>&nbsp;{{item.title}}</span><span ng-if="cartItem.size">&nbsp;{{cartItem.size}}</span>
+                {{cartItem.quantity}}x<span>&nbsp;{{cartItem.title}}</span><span ng-if="cartItem.size">&nbsp;{{cartItem.size}}</span>
             </div>
         </md-card-footer>
     </md-card>

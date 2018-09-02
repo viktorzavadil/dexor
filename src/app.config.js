@@ -2,10 +2,7 @@
 
 export default routing;
 
-function routing($urlRouterProvider, $locationProvider, $mdThemingProvider) {
-    $locationProvider.html5Mode(true);
-    $urlRouterProvider.otherwise('/');
-
+function routing($mdThemingProvider) {
     $mdThemingProvider.theme('default')
-        .primaryPalette('grey');
+        .primaryPalette('brown').dark();
 }
