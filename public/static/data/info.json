@@ -1,23 +1,28 @@
 [
   {
     "position": "left",
-    "title": "Dexor v Plzeňském kraji",
-    "text": "Přijďte se na nás podívat 7.1.2017.",
-    "image": "/static/data/images/plzen.jpg",
+    "title": "DEXOR",
+    "text": "Dáváme si pauzu s koncertováním, ale to neznamená, že se flákáme. Děláme na novým materiálu, bude to masakr, těšte se!",
+    "image": "/static/data/images/makame.svg",
     "order": 1
   },
   {
-    "position": "right",
-    "title": "Starý časy",
-    "text": "21.8.2015 jsme publikovali klip Starý časy!",
-    "youtube": "https://www.youtube.com/embed/f8No31SF2Gc?rel=0",
-    "order": 1
-  },
-  {
-    "position": "right",
+    "position": "left",
     "title": "moda.cz",
     "text": "Vyšel článek o kapele DEXOR na serveru moda.cz!",
     "link": "http://www.moda.cz/a/kladenska-metalova-kapela-dexor--12683",
+    "order": 2
+  },
+  {
+    "position": "right",
+    "title": "23.6.2018 RASKWER-FEST",
+    "youtube": "https://www.youtube.com/embed/LWDNlB9nA4M",
+    "order": 1
+  },
+  {
+    "position": "right",
+    "title": "Spravedlivej soud (live)",
+    "youtube": "https://www.youtube.com/embed/tBYShZHdv1k",
     "order": 2
   }
 ]

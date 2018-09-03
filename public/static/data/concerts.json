@@ -1,16 +1,201 @@
 [
   {
+    "date": "2018-06-23T12:00:00.000Z",
+    "place": "Stehelčeves",
+    "club": "fotbalové hriště",
+    "name": "RaskwerFest no. 3",
+    "fee": 150,
+    "link": "https://www.facebook.com/events/444912319278207/"
+  },
+  {
+    "date": "2017-11-30T19:00:00.000Z",
+    "club": "Turbo Music Club",
+    "place": "Kladno",
+    "fee": 100,
+    "link": "https://www.facebook.com/events/177120536185672/"
+  },
+  {
+    "date": "2017-06-24T15:00:00.000Z",
+    "name": "Raskwer-fest No.2",
+    "club": "fotbalové hriště",
+    "place": "Stehelčeves",
+    "link": "https://www.facebook.com/events/1843999425922228/"
+  },
+  {
+    "date": "2017-03-18T19:00:00.000Z",
+    "name": "Thunder Night vol. 2",
+    "club": "Poldofka",
+    "place": "Kladno",
+    "link": "https://www.facebook.com/events/1591453767812068/"
+  },
+  {
     "date": "2017-01-07T19:30:00.000Z",
     "place": "Plzeň",
     "club": "Jam Club",
-    "fee": "100",
+    "fee": 100,
     "link": "https://www.facebook.com/events/1307586615932422/"
   },
   {
     "date": "2016-10-15T19:00:00.000Z",
     "place": "Kladno",
     "club": "Poldofka",
-    "fee": "80",
+    "fee": 80,
     "link": "https://www.facebook.com/events/1112728405467058/"
+  },
+  {
+    "date": "2016-04-16T18:30:00.000Z",
+    "place": "Kladno",
+    "club": "Poldofka",
+    "fee": null,
+    "link": "https://www.facebook.com/events/942792505783701/"
+  },
+  {
+    "date": "2015-10-30T19:00:00.000Z",
+    "place": "Kladno",
+    "club": "Poldofka",
+    "fee": null,
+    "link": "http://bandzone.cz/koncert/388804-kladno-poldofka-black-hill-dexor-a-avoid"
+  },
+  {
+    "date": "2015-10-16T19:00:00.000Z",
+    "place": "Libochovice",
+    "club": "-",
+    "fee": null,
+    "link": "http://bandzone.cz/koncert/387495-libochovice-propan-butan-a-dexor"
+  },
+  {
+    "date": "2015-07-18T18:00:00.000Z",
+    "place": "Lhota, u Staré Boleslavy",
+    "club": "Hřiště",
+    "link": "http://bandzone.cz/koncert/380917-lhota-hriste-rock-metalova-lhota"
+  },
+  {
+    "date": "2015-05-23T19:00:00.000Z",
+    "place": "Ocelářská, Kladno",
+    "club": "Auto Da Fé",
+    "fee": 100,
+    "link": "http://bandzone.cz/koncert/380161-kladno-auto-da-fe-hard-and-heavy-vecer-na-kladne"
+  },
+  {
+    "date": "2015-04-25T20:00:00.000Z",
+    "place": "Úvaly",
+    "club": "hospoda na fot. hřišti",
+    "fee": null,
+    "link": "http://bandzone.cz/koncert/375935-uvaly-hospoda-na-fot-hristi-uvalska-metal-party-vol-1"
+  },
+  {
+    "date": "2015-03-14T20:00:00.000Z",
+    "place": "Rakovník",
+    "club": "klub Astacus",
+    "fee": 90,
+    "link": "http://www.astacus.cz/"
+  },
+  {
+    "date": "2015-02-07T19:00:00.000Z",
+    "place": "Kladno",
+    "club": "klub Poldofka"
+  },
+  {
+    "date": "2014-11-28T20:00:00.000Z",
+    "place": "Slaný, Ouvalova 333",
+    "club": "klub RockPUBlica",
+    "link": "http://bandzone.cz/koncert/358561-slany-rockpublica-h-i-m-y-m-tour-slany"
+  },
+  {
+    "date": "2014-11-22T20:00:00.000Z",
+    "place": "Kamenné Zboží u Nymburka",
+    "club": "hostinec U Málků",
+    "fee": 100,
+    "link": "http://bandzone.cz/koncert/359217-kamenne-zbozi-hostinec-u-malku-zhruba-vol-6"
+  },
+  {
+    "date": "2014-09-20T18:00:00.000Z",
+    "place": "Kladno",
+    "club": "klub Poldofka",
+    "link": "http://bandzone.cz/koncert/336131-kladno-poldofka-party-massacre-vol-2"
+  },
+  {
+    "date": "2014-09-13T16:00:00.000Z",
+    "place": "Třebusice u Kladna",
+    "club": "zahrada místní restaurace",
+    "link": "http://bandzone.cz/koncert/352896-trebusice-zahrada-mistni-restaurace-methanolove-odpoledne"
+  },
+  {
+    "date": "2014-08-16T18:30:00.000Z",
+    "place": "Řevničov",
+    "club": "fotbalové hřiště",
+    "link": "http://bandzone.cz/koncert/352251-revnicov-fotbalove-hriste-spartafest-2014"
+  },
+  {
+    "date": "2014-04-19T19:05:00.000Z",
+    "place": "Kladno",
+    "club": "klub Poldofka"
+  },
+  {
+    "date": "2014-04-12T20:00:00.000Z",
+    "place": "Beroun",
+    "club": "RC Prdel"
+  },
+  {
+    "date": "2014-02-14T20:00:00.000Z",
+    "place": "Sokolovská 195, Praha",
+    "club": "Exit-Us",
+    "fee": null
+  },
+  {
+    "date": "2014-01-18T19:30:00.000Z",
+    "place": "Ocelárenská, Kladno",
+    "club": "Auto Da Fé"
+  },
+  {
+    "date": "2013-12-14T20:00:00.000Z",
+    "place": "Želenice",
+    "club": "Hospůdka Želenice",
+    "fee": 50
+  },
+  {
+    "date": "2013-08-02T18:00:00.000Z",
+    "place": "Tři Dvory u Kolína",
+    "club": "přírodní koupaliště",
+    "fee": 100
+  },
+  {
+    "date": "2013-03-23T20:45:00.000Z",
+    "place": "Kralupy nad Vltavou",
+    "club": "Klub Ponorka"
+  },
+  {
+    "date": "2013-03-09T17:00:00.000Z",
+    "place": "Ocelárenská, Kladno",
+    "club": "Auto Da Fé",
+    "fee": 40
+  },
+  {
+    "date": "2013-02-01T20:00:00.000Z",
+    "place": "Ouvalova Ouvalova/333, Slaný",
+    "club": "RockPUBlica"
+  },
+  {
+    "date": "2013-01-19T19:00:00.000Z",
+    "place": "Rokycanova 29, Praha 3 - Žižkov",
+    "club": "XT3",
+    "fee": 60
+  },
+  {
+    "date": "2012-12-15T18:30:00.000Z",
+    "place": "Brandýsek",
+    "club": "Hospoda U Kožených"
+  },
+  {
+    "date": "2012-08-25T19:00:00.000Z",
+    "place": "Řevničov",
+    "club": "fotbalové hřiště"
+  },
+  {
+    "date": "2012-05-26T19:30:00.000Z",
+    "place": "Ocelárenská, Kladno",
+    "club": "Auto Da Fé",
+    "fee": 80,
+    "link": "http://bandzone.cz/koncert/269748-kladno-auto-da-fe-dexor-midnight-sabers"
   }
 ]

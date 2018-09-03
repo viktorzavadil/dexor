@@ -6,7 +6,7 @@ export default ['$scope', '$state', '$stateParams', '$location', '$timeout', 'co
 
 function ConcertsController($scope, $state, $stateParams, $location, $timeout, concertResource) {
 
-    const itemPerPage = 5;
+    const itemPerPage = 10;
 
     var self = this;
     self.next = next;

@@ -21,36 +21,32 @@
             Bude připočteno poštovné podle sazeb České pošty.
         </div>
         <md-divider></md-divider>
-        <div layout="row" layout-xs="column">
-            <md-input-container flex-gt-xs="">
+        <div>
+            <md-input-container>
                 <label>Jméno</label>
                 <input type="text" name="name" ng-model="user.name" required>
             </md-input-container>
-            <md-input-container flex-gt-xs="">
+            <md-input-container>
                 <label>Příjmení</label>
                 <input type="text" name="surname" ng-model="user.surname" required>
             </md-input-container>
-            <md-input-container flex-gt-xs="">
+            <md-input-container>
                 <label>Email</label>
                 <input type="text" name="email" ng-model="user.email" required>
             </md-input-container>
-        </div>
-        <div layout="row" layout-xs="column">
-            <md-input-container flex-gt-xs="">
+            <md-input-container>
                 <label>Ulice a číslo popisné</label>
                 <input type="text" name="street" ng-model="user.street" required>
             </md-input-container>
-            <md-input-container flex-gt-xs="">
+            <md-input-container>
                 <label>Město</label>
                 <input type="text" name="city" ng-model="user.city" required>
             </md-input-container>
-            <md-input-container flex-gt-xs="">
+            <md-input-container>
                 <label>PSČ</label>
                 <input type="number" name="postalCode" ng-model="user.postalCode" required>
             </md-input-container>
-        </div>
-        <div class="note" layout="row">
-            <md-input-container flex>
+            <md-input-container>
                 <label>Poznámka</label>
                 <textarea cols="50" name="note" ng-model="user.note"></textarea>
             </md-input-container>

@@ -6,14 +6,14 @@
     </md-subheader>
     <md-list>
         <md-list-item class="md-3-line" ng-repeat="concert in vm.showedConcerts"
-                      href="{{concert.link ? concert.link : '/concerts'}}">
+                      href="{{concert.link ? concert.link : ''}}">
             <div class="md-list-item-text" layout="row" layout-align="center center">
                 <div class="concert-icon">
                     <md-icon ng-if="concert.done">done</md-icon>
                     <md-icon ng-if="!concert.done">star</md-icon>
                 </div>
                 <div flex="">
-                    <h3>{{concert.place}} - {{concert.club}}</h3>
+                    <h3><span ng-if="concert.name">{{concert.name}}: </span>{{concert.club}} - {{concert.place}}</h3>
                     <h4>{{concert.date | date : 'dd.MM.yyyy HH:mm'}}</h4>
 
                     <p><span ng-if="concert.fee">Vstupné: {{concert.fee}},-</span></p>
